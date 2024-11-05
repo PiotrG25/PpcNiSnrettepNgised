@@ -1,1 +1,9 @@
 
+#ifndef CREATIONAL_SINGLETON_HPP
+#define CREATIONAL_SINGLETON_HPP
+
+class Singleton{
+	
+};
+
+#endif // CREATIONAL_SINGLETON_HPP

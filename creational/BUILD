@@ -1,25 +1,21 @@
-
 cc_test(
-	"test_singleton",
-	hdrs = [
-		"test_singleton.hpp"
-	],
+	name = "test_singleton",
 	srcs = [
 		"test_singleton.cpp"
 	],
 	deps = [
 		"//creational:singleton",
-        "@googletest//:gtest",
-        "@googletest//:gtest_main",
-    ],
-),
+       "@googletest//:gtest",
+       "@googletest//:gtest_main",
+   ],
+)
 
-# cc_library(
-# 	name = "singleton",
-# 	hdrs = [
-# 		"singleton.hpp"
-# 	],
-# 	srcs = [
-# 		"singleton.cpp"
-# 	]
-# )
+cc_library(
+	name = "singleton",
+	hdrs = [
+		"singleton.hpp"
+	],
+	srcs = [
+		"singleton.cpp"
+	]
+)
