@@ -4,18 +4,29 @@ cc_test(
 		"test_singleton.cpp"
 	],
 	deps = [
-		"//creational:singleton",
+		"//creational:pointer_singleton",
+		"//creational:meyers_singleton",
        "@googletest//:gtest",
        "@googletest//:gtest_main",
    ],
 )
 
 cc_library(
-	name = "singleton",
+	name = "pointer_singleton",
 	hdrs = [
-		"singleton.hpp"
+		"pointer_singleton.hpp"
 	],
 	srcs = [
-		"singleton.cpp"
+		"pointer_singleton.cpp"
+	]
+)
+
+cc_library(
+	name = "meyers_singleton",
+	hdrs = [
+		"meyers_singleton.hpp"
+	],
+	srcs = [
+		"meyers_singleton.cpp"
 	]
 )
