@@ -1,5 +1,5 @@
 
-#include "meyers_singleton.hpp"
+#include "creational/singleton/meyers_singleton.hpp"
 
 MeyersSingleton& MeyersSingleton::GetInstance(){
 	static MeyersSingleton instance_;

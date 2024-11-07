@@ -1,8 +1,8 @@
 
 #include <gtest/gtest.h>
 #include <iostream>
-#include "pointer_singleton.hpp"
-#include "meyers_singleton.hpp"
+#include "creational/singleton/pointer_singleton.hpp"
+#include "creational/singleton/meyers_singleton.hpp"
 
 TEST(TestPointerSingleton, InstanceIsSame) {
 	PointerSingleton* const instance1 = PointerSingleton::GetInstance();

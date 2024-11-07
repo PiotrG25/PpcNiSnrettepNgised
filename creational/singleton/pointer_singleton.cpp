@@ -1,5 +1,5 @@
 
-#include "pointer_singleton.hpp"
+#include "creational/singleton/pointer_singleton.hpp"
 
 PointerSingleton* PointerSingleton::instance_ = nullptr;
 

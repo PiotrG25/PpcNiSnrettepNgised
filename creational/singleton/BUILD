@@ -4,11 +4,11 @@ cc_test(
 		"test_singleton.cpp"
 	],
 	deps = [
-		"//creational:pointer_singleton",
-		"//creational:meyers_singleton",
+		"//creational/singleton:pointer_singleton",
+		"//creational/singleton:meyers_singleton",
        "@googletest//:gtest",
-       "@googletest//:gtest_main",
-   ],
+       "@googletest//:gtest_main"
+   ]
 )
 
 cc_library(

@@ -1,5 +1,5 @@
 MODULE.bazel.lock
-bazel-bin/**
-bazel-out/**
-bazel-ppcnisnrettepngised/**
-bazel-testlogs/**
+bazel-bin/
+bazel-out/
+bazel-ppcnisnrettepngised/
+bazel-testlogs/
