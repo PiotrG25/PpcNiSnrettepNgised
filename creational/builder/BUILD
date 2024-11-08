@@ -5,8 +5,8 @@ cc_test(
 	],
 	deps = [
 		"//creational/builder:pizza_library",
-       "@googletest//:gtest",
-       "@googletest//:gtest_main"
+		"@googletest//:gtest",
+		"@googletest//:gtest_main"
    ]
 )
 

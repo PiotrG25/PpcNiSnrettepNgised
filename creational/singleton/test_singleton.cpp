@@ -1,6 +1,5 @@
 
 #include <gtest/gtest.h>
-#include <iostream>
 #include "creational/singleton/pointer_singleton.hpp"
 #include "creational/singleton/meyers_singleton.hpp"
 

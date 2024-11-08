@@ -6,8 +6,8 @@ cc_test(
 	deps = [
 		"//creational/singleton:pointer_singleton",
 		"//creational/singleton:meyers_singleton",
-       "@googletest//:gtest",
-       "@googletest//:gtest_main"
+		"@googletest//:gtest",
+		"@googletest//:gtest_main"
    ]
 )
 

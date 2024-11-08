@@ -1,6 +1,5 @@
 
 #include <gtest/gtest.h>
-#include <iostream>
 #include "creational/builder/pizza_cook.hpp"
 
 TEST(TestPizza, ExpectMargheritaWithTomatoSauce){
