@@ -35,7 +35,13 @@ This dependency can be removed by introducing Prototype class with virtual clone
 
 bazel test //creational/prototype:test_prototype
 
+## Prototype
+CarPartsFactory as an Abstract Factory
+
+bazel test //creational/abstract_factory:test_abstract_factory
+
 
 bazel test //creational/singleton:test_singleton
 bazel test //creational/builder:test_builder
 bazel test //creational/prototype:test_prototype
+bazel test //creational/abstract_factory:test_abstract_factory
