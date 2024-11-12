@@ -32,16 +32,25 @@ In order to use copy constructor or copy assignment oerators, the code needs to 
 
 This dependency can be removed by introducing Prototype class with virtual clone method, where each deriving class overrides it and provides a copy of itself as a result.
 
-
 bazel test //creational/prototype:test_prototype
 
-## Prototype
+## Abstract Factory
 CarPartsFactory as an Abstract Factory
 
 bazel test //creational/abstract_factory:test_abstract_factory
 
+## Factory method
+CarFactory as a Factory Method using CarPartsFactory
 
+bazel test //creational/factory_method:test_factory_method
+
+## All bazel tests
 bazel test //creational/singleton:test_singleton
+
 bazel test //creational/builder:test_builder
+
 bazel test //creational/prototype:test_prototype
+
 bazel test //creational/abstract_factory:test_abstract_factory
+
+bazel test //creational/factory_method:test_factory_method

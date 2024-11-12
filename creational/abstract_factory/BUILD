@@ -21,7 +21,8 @@ cc_library(
 	deps = [
 		"//creational/abstract_factory:engines",
 		"//creational/abstract_factory:bodies"
-	]
+	],
+	visibility = ["//visibility:public"]
 )
 
 cc_library(
