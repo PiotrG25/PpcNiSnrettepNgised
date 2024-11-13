@@ -44,6 +44,13 @@ CarFactory as a Factory Method using CarPartsFactory
 
 bazel test //creational/factory_method:test_factory_method
 
+# Structural Design Patterns
+## Adapter
+Two adapters adapting european plugs to american and vice versa
+
+bazel test //structural/adapter:test_adapter
+
+
 ## All bazel tests
 bazel test //creational/singleton:test_singleton
 
@@ -54,3 +61,5 @@ bazel test //creational/prototype:test_prototype
 bazel test //creational/abstract_factory:test_abstract_factory
 
 bazel test //creational/factory_method:test_factory_method
+
+bazel test //structural/adapter:test_adapter

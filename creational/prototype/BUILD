@@ -1,3 +1,4 @@
+
 cc_test(
 	name = "test_prototype",
 	srcs = [
