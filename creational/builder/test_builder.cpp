@@ -1,32 +1,29 @@
 
 #include <gtest/gtest.h>
+#include <algorithm>
 #include "creational/builder/pizza_cook.hpp"
+#include "creational/builder/margherita_builder.hpp"
+#include "creational/builder/diavola_builder.hpp"
 
-TEST(TestPizza, ExpectMargheritaWithTomatoSauce){
-	PizzaCook pc;
-	Pizza margherita = pc.CookMargherita(Pizza::Size::Medium, Pizza::Dough::Fluffy);
-	EXPECT_EQ(margherita.GetSauce(), Pizza::Sauce::Tomato);
-}
-
-TEST(TestPizza, ExpectMargheritaWithGlutenAndNotVegan){
-	PizzaCook pc;
-	Pizza margherita = pc.CookMargherita(Pizza::Size::Medium, Pizza::Dough::Fluffy);
-	EXPECT_EQ(margherita.IsGlutenFree(), false);
-	EXPECT_EQ(margherita.IsVegan(), false);
-}
-
-TEST(TestPizza, ExpectDiavolaToBeSpicy){
-	PizzaCook pc;
-	Pizza diavola = pc.CookDiavola(Pizza::Size::Medium, Pizza::Dough::Fluffy);
-	const auto& toppings = diavola.GetToppings();
+TEST(TestPizza, ExpectMargheritaIngredientsInMargherita){
+	std::unique_ptr<MargheritaBuilder> builder = std::make_unique<MargheritaBuilder>();
+	PizzaCook pc(std::move(builder));
+	std::unique_ptr<Pizza> margherita = pc.build(Pizza::Size::Large, Pizza::Dough::Thin);
 	
-	auto toppings_iterator = find(toppings.cbegin(), toppings.cend(), Pizza::Topping::SpicySalami);
-	EXPECT_NE(toppings_iterator, toppings.cend());
+	EXPECT_EQ(margherita->GetSauce(), Pizza::Sauce::Tomato);
+	EXPECT_EQ(margherita->GetCheeses().at(0), Pizza::Cheese::Mozzarella);
+	EXPECT_EQ(margherita->GetToppings().at(0), Pizza::Topping::Basil);
+	EXPECT_EQ(margherita->GetToppings().at(1), Pizza::Topping::OliveOil);
 }
 
-TEST(TestPizza, ExpectVeggieGlutenFreeAndVegan){
-	PizzaCook pc;
-	Pizza veggie = pc.CookVeggie(Pizza::Size::Medium, Pizza::Dough::Fluffy);
-	EXPECT_EQ(veggie.IsGlutenFree(), true);
-	EXPECT_EQ(veggie.IsVegan(), true);
+TEST(TestPizza, ExpectDiavolaIngredientsInDiavola){
+	std::unique_ptr<DiavolaBuilder> builder = std::make_unique<DiavolaBuilder>();
+	PizzaCook pc(std::move(builder));
+	std::unique_ptr<Pizza> margherita = pc.build(Pizza::Size::Large, Pizza::Dough::Thin);
+	
+	EXPECT_EQ(margherita->GetSauce(), Pizza::Sauce::Tomato);
+	EXPECT_EQ(margherita->GetCheeses().at(0), Pizza::Cheese::Mozzarella);
+	EXPECT_EQ(margherita->GetToppings().at(0), Pizza::Topping::SpicySalami);
+	EXPECT_EQ(margherita->GetToppings().at(1), Pizza::Topping::RedChiliFlakes);
+	EXPECT_EQ(margherita->GetToppings().at(2), Pizza::Topping::BlackOlives);
 }

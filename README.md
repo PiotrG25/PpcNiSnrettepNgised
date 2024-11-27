@@ -13,7 +13,7 @@ bazel test //creational/singleton:test_singleton
 ## Builder
 Pizza is an object to be built
 
-PizzaBuilder is an object builder
+PizzaBuilder is an object builder, with many builder derivatives
 
 and PizzaCook is a builder director
 

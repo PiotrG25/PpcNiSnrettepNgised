@@ -4,13 +4,16 @@
 
 #include "pizza_builder.hpp"
 
-// PizzaBuilderDirector
 class PizzaCook{
 	public:
-	Pizza CookMargherita(Pizza::Size size, Pizza::Dough dough);
-	Pizza CookDiavola(Pizza::Size size, Pizza::Dough dough);
-	Pizza CookNapoli(Pizza::Size size, Pizza::Dough dough);
-	Pizza CookVeggie(Pizza::Size size, Pizza::Dough dough);
+	PizzaCook(std::unique_ptr<PizzaBuilder>&& builder);
+	
+	void SetBuilder(std::unique_ptr<PizzaBuilder>&& builder);
+	
+	std::unique_ptr<Pizza> build(Pizza::Size size, Pizza::Dough dough);
+	
+	private:
+	std::unique_ptr<PizzaBuilder> builder_;
 };
 
 #endif // CREATIONAL_PIZZA_COOK_HPP
