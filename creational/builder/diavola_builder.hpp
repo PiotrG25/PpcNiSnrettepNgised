@@ -6,7 +6,9 @@
 
 class DiavolaBuilder : public PizzaBuilder{
 	public:
-	void MakePizza() override;
+	virtual PizzaBuilder& AddSauce() override;
+	virtual PizzaBuilder& AddCheese() override;
+	virtual PizzaBuilder& AddToppings() override;
 };
 
 #endif // CREATIONAL_DIAVOLA_BUILDER_HPP

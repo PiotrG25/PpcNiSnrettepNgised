@@ -18,12 +18,16 @@ cc_library(
 		"pizza_builder.hpp",
 		"margherita_builder.hpp",
 		"diavola_builder.hpp",
+		"napoli_builder.hpp",
+		"vege_builder.hpp",
 		"pizza_cook.hpp"
 	],
 	srcs = [
 		"pizza_builder.cpp",
 		"margherita_builder.cpp",
 		"diavola_builder.cpp",
+		"napoli_builder.cpp",
+		"vege_builder.cpp",
 		"pizza_cook.cpp"
 	]
 )

@@ -8,9 +8,13 @@
 class PizzaBuilder{
 	public:
 	PizzaBuilder();
-	void MakeBase(Pizza::Size size, Pizza::Dough dough);
-	virtual void MakePizza() = 0;
-	std::unique_ptr<Pizza> build(Pizza::Size size, Pizza::Dough dough);
+	
+	PizzaBuilder& MakeBase(Pizza::Size size, Pizza::Dough dough);
+	virtual PizzaBuilder& AddSauce() = 0;
+	virtual PizzaBuilder& AddCheese() = 0;
+	virtual PizzaBuilder& AddToppings() = 0;
+	virtual PizzaBuilder& SetTraits();
+	std::unique_ptr<Pizza> build();
 	
 	protected:
 	std::unique_ptr<Pizza> pizza_;

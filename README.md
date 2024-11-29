@@ -51,7 +51,7 @@ Two adapters adapting european plugs to american and vice versa
 bazel test //structural/adapter:test_adapter
 
 
-## All bazel tests
+# All bazel tests
 bazel test //creational/singleton:test_singleton
 
 bazel test //creational/builder:test_builder
