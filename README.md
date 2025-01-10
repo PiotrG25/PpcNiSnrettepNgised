@@ -2,7 +2,7 @@
 
 # Creational Design Patterns
 ## Singleton
-In two versions one with a pointer as a static class field PointerSingleton 
+In two versions one with a unique_ptr as a static class field PointerSingleton 
 and the other with static local instance variable, the MeyersSingleton.
 
 Since C++11 local static variables are initialized in a thread safe way, 

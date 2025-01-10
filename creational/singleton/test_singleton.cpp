@@ -4,16 +4,16 @@
 #include "creational/singleton/meyers_singleton.hpp"
 
 TEST(TestPointerSingleton, InstanceIsSame) {
-	PointerSingleton* const instance1 = PointerSingleton::GetInstance();
-	PointerSingleton* const instance2 = PointerSingleton::GetInstance();
-	EXPECT_EQ(instance1, instance2);
+	const std::unique_ptr<PointerSingleton>& instance1 = PointerSingleton::GetConstInstance();
+	const std::unique_ptr<PointerSingleton>& instance2 = PointerSingleton::GetConstInstance();
+	EXPECT_EQ(instance1.get(), instance2.get());
 }
 
 TEST(TestPointerSingleton, TwoInstancePointersWorkOnTheSameResource) {
-	PointerSingleton* const instance1 = PointerSingleton::GetInstance();
+	std::unique_ptr<PointerSingleton>& instance1 = PointerSingleton::GetInstance();
 	int expected_value = 4;
 	instance1->SetValue(expected_value);
-	PointerSingleton* const instance2 = PointerSingleton::GetInstance();
+	std::unique_ptr<PointerSingleton>& instance2 = PointerSingleton::GetInstance();
 	EXPECT_EQ(expected_value, instance2->GetValue());
 }
 
