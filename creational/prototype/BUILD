@@ -5,15 +5,20 @@ cc_test(
 		"test_prototype.cpp"
 	],
 	deps = [
-		"//creational/prototype:simple_prototype_classes",
+		"//creational/prototype:prototype_library",
 		"@googletest//:gtest",
 		"@googletest//:gtest_main"
    ]
 )
 
 cc_library(
-	name = "simple_prototype_classes",
+	name = "prototype_library",
 	hdrs = [
-		"test_prototype.hpp"
+		"prototype_pizza.hpp",
+		"diavola.hpp",
+		"vege.hpp",
+		"undefined_pizza.hpp",
+		"waiter.hpp",
+		"client.hpp"
 	]
 )
