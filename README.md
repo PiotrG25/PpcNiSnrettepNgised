@@ -29,7 +29,7 @@ CarPartsFactory as an Abstract Factory
 bazel test //creational/abstract_factory:test_abstract_factory
 
 ## Factory method
-CarFactory as a Factory Method using CarPartsFactory
+CarFactory
 
 bazel test //creational/factory_method:test_factory_method
 

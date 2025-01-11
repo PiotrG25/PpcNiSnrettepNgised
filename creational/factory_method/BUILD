@@ -15,9 +15,8 @@ cc_library(
 	name = "car_factory",
 	hdrs = [
 		"car_factory.hpp",
-		"car.hpp"
-	],
-	deps = [
-		"//creational/abstract_factory:car_parts_factories"
+		"car.hpp",
+		"standard_car.hpp",
+		"super_car.hpp"
 	]
 )
