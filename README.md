@@ -39,6 +39,12 @@ Two adapters adapting european plugs to american and vice versa
 
 bazel test //structural/adapter:test_adapter
 
+## Bridge
+Device and Remote relation allowing us to develop devices and remotes independently from each other
+
+bazel test //structural/bridge:test_bridge
+
+
 
 # All bazel tests
 bazel test //creational/singleton:test_singleton
@@ -52,3 +58,6 @@ bazel test //creational/abstract_factory:test_abstract_factory
 bazel test //creational/factory_method:test_factory_method
 
 bazel test //structural/adapter:test_adapter
+
+bazel test //structural/bridge:test_bridge
+
