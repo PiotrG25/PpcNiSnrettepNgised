@@ -5,40 +5,68 @@ cc_test(
 		"test_abstract_factory.cpp"
 	],
 	deps = [
-		"//creational/abstract_factory:car_parts_factories",
+		"car_parts_factory_implementation",
 		"@googletest//:gtest",
 		"@googletest//:gtest_main"
 	]
 )
 
 cc_library(
-	name = "car_parts_factories",
+	name = "car_parts_factory_implementation",
 	hdrs = [
-		"car_parts_factory.hpp",
 		"super_car_parts_factory.hpp",
 		"standard_car_parts_factory.hpp"
 	],
 	deps = [
-		"//creational/abstract_factory:engines",
-		"//creational/abstract_factory:bodies"
-	],
-	visibility = ["//visibility:public"]
-)
-
-cc_library(
-	name = "engines",
-	hdrs = [
-		"engine.hpp",
-		"standard_engine.hpp",
-		"super_engine.hpp"
+		"car_parts_factory_interface",
+		"engine_implementations",
+		"body_implementations"
 	]
 )
 
 cc_library(
-	name = "bodies",
+	name = "car_parts_factory_interface",
 	hdrs = [
-		"body.hpp",
+		"car_parts_factory.hpp"
+	],
+	deps = [
+		"engine_interface",
+		"body_interface"
+	]
+)
+
+cc_library(
+	name = "engine_interface",
+	hdrs = [
+		"engine.hpp"
+	]
+)
+
+cc_library(
+	name = "engine_implementations",
+	hdrs = [
+		"standard_engine.hpp",
+		"super_engine.hpp"
+	],
+	deps = [
+		"engine_interface"
+	]
+)
+
+cc_library(
+	name = "body_interface",
+	hdrs = [
+		"body.hpp"
+	]
+)
+
+cc_library(
+	name = "body_implementations",
+	hdrs = [
 		"standard_body.hpp",
 		"super_body.hpp"
+	],
+	deps = [
+		"body_interface"
 	]
 )
