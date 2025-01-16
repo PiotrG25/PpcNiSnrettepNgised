@@ -6,12 +6,8 @@
 
 class SuperCar : public Car{
 	public:
-	virtual FuelEfficiency GetFuelEfficiency() const override {
-		return FuelEfficiency::Low;
-	}
-	virtual BodyDesign GetBodyDesign() const override {
-		return BodyDesign::Beautiful;
-	}
+	virtual FuelEfficiency GetFuelEfficiency() const override;
+	virtual BodyDesign GetBodyDesign() const override;
 };
 
 #endif // CREATIONAL_FATORY_METHOD_SUPER_CAR_HPP

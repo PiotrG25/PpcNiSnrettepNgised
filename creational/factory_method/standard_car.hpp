@@ -6,12 +6,8 @@
 
 class StandardCar : public Car{
 	public:
-	virtual FuelEfficiency GetFuelEfficiency() const override {
-		return FuelEfficiency::High;
-	}
-	virtual BodyDesign GetBodyDesign() const override {
-		return BodyDesign::Standard;
-	}
+	virtual FuelEfficiency GetFuelEfficiency() const override;
+	virtual BodyDesign GetBodyDesign() const override;
 };
 
 #endif // CREATIONAL_FATORY_METHOD_STANDARD_CAR_HPP
