@@ -7,22 +7,10 @@
 
 class Client{
 	public:
-	void OrderDiavola(Waiter& waiter){
-		pizza_ = waiter.OrderDiavola();
-	}
-	void OrderVege(Waiter& waiter){
-		pizza_ = waiter.OrderVege();
-	}
-	void OrderSameAsThePreviousPerson(Waiter& waiter){
-		pizza_ = waiter.OrderSameAsThePreviousPerson();
-		if(pizza_->GetTaste() == PrototypePizza::Taste::No){
-			OrderDiavola(waiter); // always good
-		}
-	}
-	
-	bool IsSatisfied() const{
-		return pizza_->GetTaste() == PrototypePizza::Taste::Good;
-	}
+	void OrderDiavola(Waiter& waiter);
+	void OrderVege(Waiter& waiter);
+	void OrderSameAsThePreviousPerson(Waiter& waiter);
+	bool IsSatisfied() const;
 	
 	private:
 	std::shared_ptr<PrototypePizza> pizza_{nullptr};
