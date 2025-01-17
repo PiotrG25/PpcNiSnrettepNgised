@@ -44,6 +44,11 @@ Device and Remote relation allowing us to develop devices and remotes independen
 
 bazel test //structural/bridge:test_bridge
 
+## Composite
+A composite design pattern implemented with a simple text to printer formating Printable classes
+
+bazel test //structural/composite:test_composite
+
 
 
 # All bazel tests
@@ -61,3 +66,4 @@ bazel test //structural/adapter:test_adapter
 
 bazel test //structural/bridge:test_bridge
 
+bazel test //structural/composite:test_composite
