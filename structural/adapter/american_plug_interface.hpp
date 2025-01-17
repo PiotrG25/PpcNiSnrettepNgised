@@ -1,0 +1,10 @@
+
+#ifndef STRUCTURAL_ADAPTER_AMERICAN_PLUG_INTERFACE_HPP
+#define STRUCTURAL_ADAPTER_AMERICAN_PLUG_INTERFACE_HPP
+
+class AmericanPlugInterface{
+	public:
+	virtual int ConnectToAmericanSocket() const = 0;
+};
+
+#endif // STRUCTURAL_ADAPTER_AMERICAN_PLUG_INTERFACE_HPP

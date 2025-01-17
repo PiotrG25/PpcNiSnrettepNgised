@@ -1,0 +1,10 @@
+
+#ifndef STRUCTURAL_ADAPTER_EUROPEAN_PLUG_INTERFACE_HPP
+#define STRUCTURAL_ADAPTER_EUROPEAN_PLUG_INTERFACE_HPP
+
+class EuropeanPlugInterface{
+	public:
+	virtual int ConnectToEuropeanSocket() const = 0;
+};
+
+#endif // STRUCTURAL_ADAPTER_EUROPEAN_PLUG_INTERFACE_HPP

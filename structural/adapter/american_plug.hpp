@@ -2,10 +2,12 @@
 #ifndef STRUCTURAL_ADAPTER_AMERICAN_PLUG_HPP
 #define STRUCTURAL_ADAPTER_AMERICAN_PLUG_HPP
 
-class AmericanPlug{
+#include "american_plug_interface.hpp"
+
+class AmericanPlug : public AmericanPlugInterface{
 	public:
 	AmericanPlug(int id) : id_(id) {}
-	virtual int ConnectToAmericanSocket() const {
+	virtual int ConnectToAmericanSocket() const override{
 		return id_;
 	}
 	private:

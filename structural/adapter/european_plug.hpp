@@ -2,10 +2,12 @@
 #ifndef STRUCTURAL_ADAPTER_EUROPEAN_PLUG_HPP
 #define STRUCTURAL_ADAPTER_EUROPEAN_PLUG_HPP
 
-class EuropeanPlug{
+#include "european_plug_interface.hpp"
+
+class EuropeanPlug : public EuropeanPlugInterface{
 	public:
 	EuropeanPlug(int id) : id_(id) {}
-	virtual int ConnectToEuropeanSocket() const {
+	virtual int ConnectToEuropeanSocket() const override {
 		return id_;
 	}
 	private:
