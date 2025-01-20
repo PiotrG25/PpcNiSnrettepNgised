@@ -49,7 +49,10 @@ A composite design pattern implemented with a simple text to printer formating P
 
 bazel test //structural/composite:test_composite
 
+## Decorator
+A Decorator design pattern implemented as pizza wrappers of pizza
 
+bazel test //structural/decorator:test_decorator
 
 # All bazel tests
 bazel test //creational/singleton:test_singleton
@@ -67,3 +70,5 @@ bazel test //structural/adapter:test_adapter
 bazel test //structural/bridge:test_bridge
 
 bazel test //structural/composite:test_composite
+
+bazel test //structural/decorator:test_decorator
