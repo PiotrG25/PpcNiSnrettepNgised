@@ -54,6 +54,17 @@ A Decorator design pattern implemented as pizza wrappers of pizza
 
 bazel test //structural/decorator:test_decorator
 
+## Facade
+Pizza Cook, which is a director in the builder design pattern.
+It serves the same role as a facade, simplifying the use of other classes
+
+## Flyweight
+Flyweight is a design pattern that helps us save memory, when using multiple instances holding the same information.
+In current implementation for every flyweight object we increase memory consumption by 24 bytes, while every heavyweight object increases it by 40 bytes.
+With 88 bytes overhead it makes this design pattern useful, after breaking the 6 object barier (232 < 240)
+
+bazel test //structural/flyweight:test_flyweight
+
 # All bazel tests
 bazel test //creational/singleton:test_singleton
 
@@ -72,3 +83,5 @@ bazel test //structural/bridge:test_bridge
 bazel test //structural/composite:test_composite
 
 bazel test //structural/decorator:test_decorator
+
+bazel test //structural/flyweight:test_flyweight
