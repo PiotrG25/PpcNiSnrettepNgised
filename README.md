@@ -65,6 +65,12 @@ With 88 bytes overhead it makes this design pattern useful, after breaking the 6
 
 bazel test //structural/flyweight:test_flyweight
 
+## Proxy
+MatrixAddition is a proxy to Matrix, embodying a lazy initialization of values stored within it.
+
+bazel test //structural/proxy:test_proxy
+
+
 # All bazel tests
 bazel test //creational/singleton:test_singleton
 
@@ -85,3 +91,5 @@ bazel test //structural/composite:test_composite
 bazel test //structural/decorator:test_decorator
 
 bazel test //structural/flyweight:test_flyweight
+
+bazel test //structural/proxy:test_proxy

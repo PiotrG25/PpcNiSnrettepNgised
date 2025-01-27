@@ -1,10 +1,9 @@
 
 #include <gtest/gtest.h>
-
+#include <iostream>
 #include "pizza.hpp"
 #include "pizza_type.hpp"
 #include "heavyweight_pizza.hpp"
-#include <iostream>
 
 namespace {
 	void CheckPizzaType(const Pizza& pizza, const std::shared_ptr<PizzaType>& pizza_type){
