@@ -5,10 +5,20 @@ cc_test(
 		"test_flyweight.cpp"
 	],
 	deps = [
-		"flyweight_pizza",
+		"menu",
 		"heavyweight_pizza",
 		"@googletest//:gtest",
 		"@googletest//:gtest_main"
+	]
+)
+
+cc_library(
+	name = "menu",
+	hdrs = [
+		"menu.hpp"
+	],
+	deps = [
+		"flyweight_pizza"
 	]
 )
 
