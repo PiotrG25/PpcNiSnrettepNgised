@@ -66,19 +66,3 @@ TEST(BridgeTest, ExpectTelevisionToHaveCorrectVolumeAfterTurningItDown){
 	remote.VolumeDown();
 	EXPECT_EQ(19, device->GetVolume());
 }
-
-TEST(BridgeTest, ExpectTelevisionToHaveCorrectBrightnessAfterTurningItUp){
-	std::shared_ptr<Television> device = std::make_shared<Television>();
-	Remote remote(device);
-	
-	remote.BrightnessUp();
-	EXPECT_EQ(81, device->GetBrightness());
-}
-
-TEST(BridgeTest, ExpectTelevisionToHaveCorrectBrightnessAfterTurningItDown){
-	std::shared_ptr<Television> device = std::make_shared<Television>();
-	Remote remote(device);
-	
-	remote.BrightnessDown();
-	EXPECT_EQ(79, device->GetBrightness());
-}

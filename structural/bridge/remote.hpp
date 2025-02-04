@@ -25,14 +25,6 @@ class Remote{
 		device_->VolumeDown();
 	}
 	
-	void BrightnessUp(){
-		device_->BrightnessUp();
-	}
-	
-	void BrightnessDown(){
-		device_->BrightnessDown();
-	}
-	
 	private:
 	std::shared_ptr<Device> device_;
 };

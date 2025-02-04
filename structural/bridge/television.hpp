@@ -14,10 +14,6 @@ class Television : public Device{
 	virtual void VolumeDown() override;
 	virtual int GetVolume() const override;
 	
-	virtual void BrightnessUp() override;
-	virtual void BrightnessDown() override;
-	virtual int GetBrightness() const override;
-	
 	private:
 	bool is_turned_on_{false};
 	int volume_{20};

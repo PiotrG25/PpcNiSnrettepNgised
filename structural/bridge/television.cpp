@@ -20,13 +20,3 @@ void Television::VolumeDown(){
 int Television::GetVolume() const {
 	return volume_;
 }
-
-void Television::BrightnessUp() {
-	++brightness_;
-}
-void Television::BrightnessDown() {
-	--brightness_;
-}
-int Television::GetBrightness() const {
-	return brightness_;
-}

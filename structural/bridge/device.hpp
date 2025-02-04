@@ -11,10 +11,6 @@ class Device{
 	virtual void VolumeUp() = 0;
 	virtual void VolumeDown() = 0;
 	virtual int GetVolume() const = 0;
-	
-	virtual void BrightnessUp() = 0;
-	virtual void BrightnessDown() = 0;
-	virtual int GetBrightness() const = 0;
 };
 
 #endif // STRUCTURAL_BRIDGE_DEVICE_HPP
