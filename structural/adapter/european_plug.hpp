@@ -6,12 +6,13 @@
 
 class EuropeanPlug : public EuropeanPlugInterface{
 	public:
-	EuropeanPlug(int id) : id_(id) {}
+	EuropeanPlug() = default;
+	EuropeanPlug(int voltage) : voltage_(voltage) {}
 	virtual int ConnectToEuropeanSocket() const override {
-		return id_;
+		return voltage_;
 	}
-	private:
-	int id_;
+	protected:
+	int voltage_;
 };
 
 #endif // STRUCTURAL_ADAPTER_EUROPEAN_PLUG_HPP

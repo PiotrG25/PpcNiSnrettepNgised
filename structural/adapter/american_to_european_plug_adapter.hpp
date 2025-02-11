@@ -7,7 +7,10 @@
 
 class AmericanToEuropeanPlugAdapter : public EuropeanPlug{
 	public:
-	AmericanToEuropeanPlugAdapter(const AmericanPlugInterface& american_plug) : EuropeanPlug(american_plug.ConnectToAmericanSocket()) {}
+	AmericanToEuropeanPlugAdapter(const AmericanPlugInterface& american_plug){
+		const int american_voltage = american_plug.ConnectToAmericanSocket();
+		voltage_ = (american_voltage > 230 ? 230 : american_voltage);
+	}
 };
 
 #endif // STRUCTURAL_ADAPTER_AMERICAN_TO_EUROPEAN_PLUG_ADAPTER_HPP

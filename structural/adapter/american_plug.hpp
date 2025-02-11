@@ -6,12 +6,13 @@
 
 class AmericanPlug : public AmericanPlugInterface{
 	public:
-	AmericanPlug(int id) : id_(id) {}
+	AmericanPlug() = default;
+	AmericanPlug(int voltage) : voltage_(voltage) {}
 	virtual int ConnectToAmericanSocket() const override{
-		return id_;
+		return voltage_;
 	}
-	private:
-	int id_;
+	protected:
+	int voltage_;
 };
 
 #endif // STRUCTURAL_ADAPTER_AMERICAN_PLUG_HPP
