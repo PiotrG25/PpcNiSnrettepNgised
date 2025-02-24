@@ -14,11 +14,10 @@ cc_test(
 cc_library(
 	name = "decorator_library",
 	hdrs = [
-		"pizza.hpp",
-		"pizza_base.hpp",
-		"custom_pizza.hpp",
-		"tomato_sauce_pizza.hpp",
-		"cheese_pizza.hpp",
-		"salami_pizza.hpp"
+		"data_source.hpp",
+		"string_data_source.hpp",
+		"file_handler.hpp",
+		"encrypter.hpp",
+		"encoder.hpp"
 	]
 )
