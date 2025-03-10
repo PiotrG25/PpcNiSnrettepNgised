@@ -5,36 +5,29 @@ cc_test(
 		"test_proxy.cpp"
 	],
 	deps = [
-		"matrix_library",
-		"matrix_addition_library",
+		"proxy_implementation",
 		"@googletest//:gtest",
 		"@googletest//:gtest_main"
 	]
 )
 
 cc_library(
-	name = "matrix_addition_library",
+	name = "proxy_implementation",
 	hdrs = [
-		"matrix_addition.hpp",
+		"database_proxy.hpp",
+		"database.hpp"
 	],
 	deps = [
-		"matrix_interface"
+		"database_interface",
+		"@sqlite3//:sqlite3",
+		"@boost.optional"
 	]
 )
 
 cc_library(
-	name = "matrix_library",
+	name = "database_interface",
 	hdrs = [
-		"matrix.hpp"
-	],
-	deps = [
-		"matrix_interface"
-	]
-)
-
-cc_library(
-	name = "matrix_interface",
-	hdrs = [
-		"matrix_interface.hpp"
+		"user.hpp",
+		"database_interface.hpp"
 	]
 )

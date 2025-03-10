@@ -66,7 +66,9 @@ With 88 bytes overhead it makes this design pattern useful, after breaking the 6
 bazel test //structural/flyweight:test_flyweight
 
 ## Proxy
-MatrixAddition is a proxy to Matrix, embodying a lazy initialization of values stored within it.
+DatabaseProxy saves frequently accessed information.
+Updates them only when change to Database happened.
+Limits the amount of time consumming operations to Database.
 
 bazel test //structural/proxy:test_proxy
 
