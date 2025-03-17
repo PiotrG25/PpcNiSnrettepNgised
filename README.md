@@ -72,6 +72,10 @@ Limits the amount of time consumming operations to Database.
 
 bazel test //structural/proxy:test_proxy
 
+# Behavioral Design Patterns
+## Chain of Responsibility
+
+bazel test //behavioral/chain_of_responsibility:test_chain_of_responsibility
 
 # All bazel tests
 bazel test //creational/singleton:test_singleton
@@ -95,3 +99,5 @@ bazel test //structural/decorator:test_decorator
 bazel test //structural/flyweight:test_flyweight
 
 bazel test //structural/proxy:test_proxy
+
+bazel test //behavioral/chain_of_responsibility:test_chain_of_responsibility

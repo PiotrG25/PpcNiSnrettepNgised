@@ -1,5 +1,9 @@
 MODULE.bazel.lock
+bazel-bin
 bazel-bin/
+bazel-out
 bazel-out/
 bazel-ppcnisnrettepngised/
+bazel-PpcNiSnrettepNgised
 bazel-testlogs/
+bazel-testlogs
