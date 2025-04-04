@@ -77,6 +77,11 @@ bazel test //structural/proxy:test_proxy
 
 bazel test //behavioral/chain_of_responsibility:test_chain_of_responsibility
 
+## Command
+
+bazel test //behavioral/command:test_command
+
+
 # All bazel tests
 bazel test //creational/singleton:test_singleton
 
